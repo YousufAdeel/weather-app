@@ -1,8 +1,8 @@
 const weatherForm = document.querySelector(".weatherForm");
-const cityInput   = document.querySelector(".cityInput");
-const card        = document.querySelector(".card");
-const unitToggle  = document.getElementById("unitToggle");
-const apiKey      = "ZCT473ANRULL9ZEQLBMG5S5BL"; // ← replace here
+const cityInput = document.querySelector(".cityInput");
+const card = document.querySelector(".card");
+const unitToggle = document.getElementById("unitToggle");
+const apiKey = "ZCT473ANRULL9ZEQLBMG5S5BL";
 
 // Keep last‐fetched data so we can re‐render on toggle
 let lastData = null;
@@ -62,32 +62,28 @@ function displayWeatherInfo(data) {
     ? `${tempC.toFixed(1)}°C`
     : `${tempF.toFixed(1)}°F`;
 
-  // Clear old card
+  // Clear previous weather card
   card.innerHTML = "";
   card.style.display = "flex";
 
-  // Create elements
   const cityDisplay     = document.createElement("h1");
   const tempDisplay     = document.createElement("p");
   const humidityDisplay = document.createElement("p");
   const descDisplay     = document.createElement("p");
   const emojiDisplay    = document.createElement("p");
 
-  // Fill content
   cityDisplay.textContent     = location;
   tempDisplay.textContent     = tempStr;
   humidityDisplay.textContent = `Humidity: ${humidity}%`;
   descDisplay.textContent     = description;
   emojiDisplay.textContent    = mapIconToEmoji(iconCode);
 
-  // Apply your existing classes
   cityDisplay.classList.add("cityDisplay");
   tempDisplay.classList.add("tempDisplay");
   humidityDisplay.classList.add("humidityDisplay");
   descDisplay.classList.add("descDisplay");
   emojiDisplay.classList.add("weatherEmoji");
 
-  // Append to card
   card.appendChild(cityDisplay);
   card.appendChild(tempDisplay);
   card.appendChild(humidityDisplay);

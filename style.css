@@ -1,9 +1,9 @@
-/* reset & base */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
+
   html, body {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,7 +11,6 @@
     color: #fff;
   }
   
-  /* center everything */
   body {
     display: flex;
     flex-direction: column;
@@ -19,8 +18,7 @@
     justify-content: center;
     padding: 20px;
   }
-  
-  /* ——— FORM ——— */
+
   .weatherForm {
     display: flex;
     align-items: center;
@@ -68,7 +66,6 @@
     transform: translateY(-1px);
   }
   
-  /* checkbox + label */
   .unitLabel {
     display: flex;
     align-items: center;
@@ -81,9 +78,8 @@
     cursor: pointer;
   }
   
-  /* ——— CARD ——— */
   .card {
-    display: none;              /* shown by JS on demand */
+    display: none;            
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -100,41 +96,35 @@
     transform: translateY(-4px);
   }
   
-  /* city name */
   .cityDisplay {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 12px;
-    line-height: 1.2;      /* keep multi-line (Arabic) tight */
+    line-height: 1.2;     
   }
   
-  /* temperature text */
   .tempDisplay {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 10px;
   }
   
-  /* humidity text */
   .humidityDisplay {
     font-size: 1rem;
     margin-bottom: 8px;
   }
   
-  /* description */
   .descriptionDisplay {
     font-size: 1.1rem;
     font-style: italic;
     margin-bottom: 16px;
   }
   
-  /* emoji */
   .weatherEmoji {
     font-size: 4.5rem;
     margin-top: 8px;
   }
   
-  /* error state */
   .errorDisplay {
     font-size: 1.2rem;
     font-weight: 600;
